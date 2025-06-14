@@ -21,7 +21,7 @@ export default function Home() {
         </div>
 
         <div className="bitmoji-container">
-          <Image src="/bitmoji.png" alt="Bitmoji" height={500} width={450} />
+          <Image src="/bitmoji.png" alt="Bitmoji" height={450} width={450} />
         </div>
       </div>
     </main>
