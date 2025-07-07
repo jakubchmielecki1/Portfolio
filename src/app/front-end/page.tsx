@@ -1,8 +1,29 @@
+"use client";
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import ModalScreens from "@/components/ModalScreens";
 import styles from "./page.module.scss";
 import Image from "next/image";
 import "../globals.scss";
+
 export default function Front() {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const screenshots = [
+    { src: "/assets/images/mosters1.png", alt: "Example project 1" },
+    { src: "/assets/images/monsters2.png", alt: "Example project 2" },
+    {
+      src: "/assets/images/MOV to MP4 conversion.mp4",
+      alt: "Example project 3",
+    },
+    { src: "/assets/images/form-brak-mail.png", alt: "Example project 2" },
+    { src: "/assets/images/formularz-mail.png", alt: "Example project 2" },
+
+    { src: "/assets/images/formulatz-komunikat.png", alt: "Example project 2" },
+    { src: "/assets/images/tip-calculator.png", alt: "Example project 2" },
+
+    { src: "/assets/images/advice-api.png", alt: "Example project 2" },
+  ];
   return (
     <main>
       <Navbar />
@@ -28,11 +49,15 @@ export default function Front() {
               >
                 GitHub
               </a>
-              profile.
             </span>
           </div>
         </div>
-        <div className="f-end-screanshots" style={{ marginTop: "5%" }}>
+
+        <div
+          className="f-end-screanshots"
+          style={{ marginTop: "5%" }}
+          onClick={() => setModalOpen(true)}
+        >
           <Image
             src="/assets/images/stock.jpg"
             alt="Startup Stock Photo"
@@ -43,21 +68,18 @@ export default function Front() {
             <span className="arrow"></span>
             <span className="text" style={{ color: "white" }}>
               Click here!
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="1em"
-                height="1em"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  d="M4.47 4.47a.75.75 0 0 0 0 1.06l10.625 10.625L12.25 19c0 .414.336.75.75.75h6a.75.75 0 0 0 .75-.75v-6a.75.75 0 0 0-.75-.75l-2.845 2.845L5.53 4.47a.75.75 0 0 0-1.06 0"
-                />
-              </svg>
+              {/* Ikona */}
             </span>
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+      <ModalScreens
+        isOpen={isModalOpen}
+        onClose={() => setModalOpen(false)}
+        images={screenshots}
+      />
     </main>
   );
 }
