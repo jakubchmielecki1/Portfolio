@@ -2,7 +2,6 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import ModalScreens from "@/components/ModalScreens";
-import styles from "./page.module.scss";
 import Image from "next/image";
 import "../globals.scss";
 export default function Project() {

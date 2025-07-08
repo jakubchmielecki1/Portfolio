@@ -27,14 +27,14 @@ export default function Cyber() {
           >
             <span className="description-text-f-end">
               <h1>🔐 Cybersecurity</h1>
-              Although I don’t yet have professional experience in
+              Although I don&apos;t yet have professional experience in
               cybersecurity, I am actively learning about the field, focusing on
               web application vulnerabilities, ethical hacking, and secure
-              software design. I’m particularly interested in topics like OWASP
-              Top 10, secure authentication practices, and real-time attack
-              monitoring. Below, I've left a little something for those who
-              appreciate a good flag hunt – sometimes, the answer is in the
-              source.
+              software design. I&apos;m particularly interested in topics like
+              OWASP Top 10, secure authentication practices, and real-time
+              attack monitoring.Below, I&apos;ve left a little something for
+              those who appreciate a good flag hunt – sometimes, the answer is
+              in the source.
               {/* CTF{pRTF0l10} */}
             </span>
           </div>
