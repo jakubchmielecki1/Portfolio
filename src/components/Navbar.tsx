@@ -16,7 +16,7 @@ export default function Navbar() {
         <Link href="/cybersecurity">Cybersecurity</Link>
       </button>
       <button className={styles["nav-btn"]}>
-        <Link href="/bechelor">Project</Link>
+        <Link href="/bachelor">Project</Link>
       </button>
     </nav>
   );

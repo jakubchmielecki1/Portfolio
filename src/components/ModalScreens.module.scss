@@ -23,4 +23,26 @@
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+
+  .media-item {
+    transition: 0.25s all ease;
+
+    &:hover {
+      scale: 1.25;
+      transition: 0.25s all ease;
+    }
+  }
+}
+
+.place-for-nav-modal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .close-btn {
+    height: 25px;
+    width: 30px;
+    background-color: red;
+    cursor: pointer;
+  }
 }

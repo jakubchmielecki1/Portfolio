@@ -18,21 +18,41 @@ const ModalScreens: React.FC<ModalProps> = ({ isOpen, onClose, images }) => {
         className={styles["modal-content"]}
         onClick={(e) => e.stopPropagation()}
       >
-        <h2 style={{ color: "white" }}>My Projects</h2>
-
-        <div className={styles["modal-gallery"]}>
-          {images.map((img, index) => (
-            <Image
-              key={index}
-              src={img.src}
-              width={400}
-              height={250}
-              alt={img.alt || `image-${index}`}
-            />
-          ))}
+        <div className={styles["place-for-nav-modal"]}>
+          <h2 style={{ color: "white" }}>My Projects</h2>
+          <button onClick={onClose} className={styles["close-btn"]}>
+            X
+          </button>
         </div>
 
-        <button onClick={onClose}>Close</button>
+        <div className={styles["modal-gallery"]}>
+          {images.map((item, index) => {
+            const isVideo = item.src.toLowerCase().endsWith(".mp4");
+
+            return (
+              <div key={index} className={styles["media-item"]}>
+                {isVideo ? (
+                  <video
+                    src={item.src}
+                    controls
+                    width={400}
+                    height={250}
+                    style={{ borderRadius: "8px" }}
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <Image
+                    src={item.src}
+                    width={400}
+                    height={250}
+                    alt={item.alt || `image-${index}`}
+                  />
+                )}
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

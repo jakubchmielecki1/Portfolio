@@ -41,7 +41,7 @@ export default function Front() {
               self-improvement by doing what I truly enjoy. You can find
               screenshots of some of my projects on the right — both those
               completed independently and in collaboration with my mentor.
-              Several of them are also available on my
+              Several of them are also available on my{" "}
               <a
                 href="https://github.com/jakubchmielecki1?tab=repositories"
                 target="_blank"
