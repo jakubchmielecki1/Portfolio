@@ -2,9 +2,7 @@
 import React, { useState, useRef } from "react";
 import Link from "next/link";
 
-interface CvSectionProps {}
-
-const CvSection: React.FC<CvSectionProps> = () => {
+const CvSection = () => {
   const [isOpen, setIsOpen] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
