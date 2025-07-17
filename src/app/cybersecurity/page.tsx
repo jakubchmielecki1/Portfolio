@@ -32,7 +32,7 @@ export default function Cyber() {
               web application vulnerabilities, ethical hacking, and secure
               software design. I&apos;m particularly interested in topics like
               OWASP Top 10, secure authentication practices, and real-time
-              attack monitoring.Below, I&apos;ve left a little something for
+              attack monitoring. Below, I&apos;ve left a little something for
               those who appreciate a good flag hunt – sometimes, the answer is
               in the source.
               <div style={{ display: "none" }}>{`CTF{pRTF0l10}`}</div>
