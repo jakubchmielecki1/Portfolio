@@ -176,5 +176,17 @@ main {
         transform: scale(1.1);
       }
     }
+
+    .github-link {
+      background: linear-gradient(currentColor, currentColor) no-repeat;
+      background-size: 0% 2px;
+      background-position: 0 100%;
+      transition: background-size 0.3s ease;
+
+      &:hover {
+        background-size: 100% 2px;
+        cursor: pointer;
+      }
+    }
   }
 }

@@ -45,6 +45,7 @@ export default function Front() {
                 href="https://github.com/jakubchmielecki1?tab=repositories"
                 target="_blank"
                 style={{ color: "bisque" }}
+                className="github-link"
               >
                 GitHub
               </a>

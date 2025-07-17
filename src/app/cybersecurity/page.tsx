@@ -35,7 +35,7 @@ export default function Cyber() {
               attack monitoring.Below, I&apos;ve left a little something for
               those who appreciate a good flag hunt – sometimes, the answer is
               in the source.
-              {/* CTF{pRTF0l10} */}
+              <div style={{ display: "none" }}>{`CTF{pRTF0l10}`}</div>
             </span>
           </div>
           <div className={styles["place-for-friendly-hacking"]}>
@@ -52,11 +52,20 @@ export default function Cyber() {
                 Submit
               </button>
 
-              {message && (
-                <p style={{ marginTop: "1rem", fontWeight: "bold" }}>
-                  {message}
-                </p>
-              )}
+              <p
+                style={{
+                  marginTop: "1rem",
+                  fontWeight: "bold",
+                  opacity: message ? 1 : 0, // Zmieniaj widoczność
+                  height: message ? "auto" : "1rem", // Nadaj stałą wysokość lub 'auto' gdy widoczne
+                  transition:
+                    "opacity 0.3s ease-in-out, height 0.3s ease-in-out", // Płynne przejście (opcjonalnie)
+                  overflow: "hidden", // Zapobiega widoczności zawartości gdy wysokość jest 0
+                }}
+              >
+                {message || " "}{" "}
+                {/* Zostaw spację, aby element zawsze istniał */}
+              </p>
             </div>
           </div>
         </div>
