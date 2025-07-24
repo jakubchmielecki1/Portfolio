@@ -23,9 +23,17 @@ export default function Cyber() {
         <div className="place-for-info">
           <div
             className="f-end-info"
-            style={{ transform: "translateX(-250px)", marginTop: "5%" }}
+            style={{ marginTop: "5%", transform: "translateY(5px)" }}
           >
-            <span className="description-text-f-end">
+            <span
+              className="description-text-cyber"
+              style={{
+                maxWidth: "700px",
+                lineHeight: "1.6",
+                padding: "0 20px",
+                transform: "translateY(-50px)",
+              }}
+            >
               <h1>🔐 Cybersecurity</h1>
               Although I don&apos;t yet have professional experience in
               cybersecurity, I am actively learning about the field, focusing on

@@ -45,91 +45,99 @@ main {
     align-items: center;
     justify-content: center;
 
-    .info-div {
-      height: 250px;
-      width: 500px;
-      background: none;
-      display: block;
-      background-color: none;
-      color: white;
-      margin-left: 25px;
-
-      .cv-wrapper {
-        position: relative;
-        display: flex;
-        align-items: center;
-        height: 50px;
-        margin-top: 25px;
-        width: fit-content;
-      }
-
-      .cv-highlight {
-        height: 50px;
-        width: 50px;
-        background-color: #6488ea;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .stuff-container {
+      .info-div {
+        height: 250px;
+        width: 500px;
+        background: none;
+        display: block;
+        background-color: none;
         color: white;
-        cursor: pointer;
-        z-index: 2;
-        border-radius: 4px;
-      }
+        margin-left: 25px;
+        transform: translateY(275px) translateX(-250px);
 
-      .cv-container {
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto;
-        position: absolute;
-        left: 50px;
-        top: 0;
-        height: 50px;
-        width: 225px;
-        background-color: #6488ea;
-        align-items: center;
-        padding: 0 10px;
-        border-top-right-radius: 4px;
-        border-bottom-right-radius: 4px;
-        opacity: 0;
-        visibility: hidden;
-        transform: translateX(-20px);
-        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-        gap: 5px;
+        .cv-wrapper {
+          position: relative;
+          display: flex;
+          align-items: center;
+          height: 50px;
+          margin-top: 25px;
+          width: 100%;
+        }
 
-        .cv-btn {
-          height: 30px;
-          border-radius: 7px;
-          border: none;
+        .cv-highlight {
+          height: 50px;
+          width: 50px;
+          background-color: #6488ea;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          cursor: pointer;
+          z-index: 2;
+          border-radius: 4px;
+        }
+
+        .cv-container {
+          display: grid;
+          grid-template-columns: auto auto;
+          grid-template-rows: auto;
+          position: absolute;
+          left: 50px;
+          top: 0;
+          height: 50px;
+          width: 225px;
+          background-color: #6488ea;
+          align-items: center;
+          padding: 0 10px;
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateX(-20px);
+          transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+          gap: 5px;
+
+          .cv-btn {
+            height: 30px;
+            border-radius: 7px;
+            border: none;
+          }
+        }
+
+        .cv-container.open {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(0);
         }
       }
 
-      .cv-container.open {
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(0);
+      .bitmoji-container {
+        height: 500px;
+        width: 450px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transform: translateY(50px) translateX(350px);
       }
-    }
 
-    .bitmoji-container {
-      height: 500px;
-      width: 450px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      margin-left: 250px;
-      margin-top: 400px;
-    }
+      .place-for-info {
+        height: 250px;
+        width: 750px;
+        background-color: white;
+        margin-left: 25px;
+        background-color: transparent;
+        color: white;
+        font-size: 20px;
+      }
 
-    .place-for-info {
-      height: 250px;
-      width: 750px;
-      background-color: white;
-      margin-left: 25px;
-      background-color: transparent;
-      color: white;
-      font-size: 20px;
-      margin-top: -500px;
+      .description-text-cyber {
+        transform: translateY(200px);
+        max-width: 700px;
+        line-height: 1.6;
+        padding: 0 20px;
+      }
     }
 
     .description-text-f-end {
@@ -146,6 +154,7 @@ main {
       background-color: transparent;
       color: white;
       font-size: 20px;
+      transform: translateY(-200px);
     }
 
     .place-for-bitmoji {
@@ -188,5 +197,106 @@ main {
         cursor: pointer;
       }
     }
+  }
+}
+
+/* Media Queries dla responsywności - TYLKO TE BLOKI POPRAWIONE */
+
+@media (max-width: 1024px) {
+  main {
+    overflow-y: auto; /* Pozwól na przewijanie głównego kontenera na mobile */
+  }
+
+  main .main-div {
+    display: flex; /* Zmień na flexbox dla układu kolumnowego na tabletach/mniejszych desktopach */
+    flex-direction: column; /* Ułóż elementy pionowo */
+    justify-content: flex-start; /* Zacznij od góry */
+    align-items: center; /* Wyśrodkuj elementy poziomo */
+    height: auto; /* Pozwól na dynamiczne dostosowanie wysokości */
+    min-height: calc(
+      100vh - 70px
+    ); /* Minimalna wysokość, aby pokryć pozostałą część ekranu (odjąć wysokość Navbara) */
+    padding: 20px 10px; /* Dodaj padding */
+    overflow-y: auto; /* Pozwól na przewijanie tylko main-div, jeśli zawartość jest za długa */
+    width: 100vw;
+    max-width: 100vw;
+  }
+
+  main .main-div .stuff-container {
+    flex-direction: column; /* Ułóż elementy pionowo w stuff-container */
+    width: 95%;
+    max-width: 500px; /* Ogranicz szerokość, aby nie rozciągały się za bardzo */
+    gap: 30px; /* Zmniejsz odstęp między elementami */
+    padding-bottom: 0; /* Resetuj ewentualny padding */
+  }
+
+  main .main-div .info-div {
+    width: 100%;
+    max-width: 500px; /* Upewnij się, że nie jest za szeroki */
+    height: auto; /* Pozwól na dynamiczne dostosowanie wysokości */
+    text-align: center; /* Wyśrodkuj tekst */
+    margin: 0; /* Zresetuj marginesy */
+    transform: none !important; /* Usuń wszystkie transformacje z mobile */
+    order: 1; /* Upewnij się, że info-div jest pierwsze */
+  }
+
+  main .main-div .bitmoji-container {
+    width: 100%;
+    max-width: 300px; /* Mniejszy rozmiar Bitmoji na tabletach */
+    height: auto; /* Pozwól na dynamiczne dostosowanie wysokości */
+    transform: none !important; /* Usuń wszystkie transformacje z mobile */
+    margin-top: auto; /* KLUCZOWE: Wypycha Bitmoji na dół, jeśli jest miejsce */
+    margin-bottom: 0; /* Resetuj dolny margines */
+    order: 2; /* Upewnij się, że Bitmoji jest drugie */
+  }
+
+  main .main-div .bitmoji-container img {
+    width: 100%;
+    height: auto; /* Obraz dostosowuje się do szerokości kontenera */
+  }
+
+  main .info-div h1 {
+    font-size: 2em;
+  }
+
+  main .info-div span {
+    font-size: 1.1em;
+  }
+
+  main .info-div span[style] {
+    font-size: 1.2em !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Dodatkowe dostosowania dla jeszcze mniejszych ekranów, jeśli potrzebne */
+  main .main-div {
+    padding: 15px 10px;
+    padding-top: 70px; /* Nadal potrzebny padding od Navbara */
+  }
+
+  main .main-div .bitmoji-container {
+    max-width: 220px; /* Jeszcze mniejsze Bitmoji na telefonach */
+    margin-top: auto; /* Zapewnia, że jest na dole */
+  }
+
+  main .info-div {
+    margin-bottom: 20px; /* Trochę odstępu po tekście */
+  }
+}
+
+@media (max-width: 480px) {
+  main .main-div {
+    padding: 15px 5px;
+    padding-top: 70px;
+  }
+
+  main .main-div .bitmoji-container {
+    max-width: 180px; /* Minimalny rozmiar Bitmoji */
+    margin-top: auto; /* Zapewnia, że jest na dole */
+  }
+
+  main .main-div .info-div {
+    font-size: 0.9em; /* Mniejsza czcionka na najmniejszych ekranach */
   }
 }

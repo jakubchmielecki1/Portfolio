@@ -27,7 +27,7 @@ export default function Front() {
     <main>
       <Navbar />
       <div className="main-div f-end-main-div">
-        <div className="place-for-info">
+        <div className="place-for-cyber-info">
           <div className="f-end-info" style={{ marginTop: "5%" }}>
             <span className="description-text-f-end">
               <h1>💻 Front-end Development</h1>

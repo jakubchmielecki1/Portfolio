@@ -7,26 +7,27 @@ export default function Home() {
     <main>
       <Navbar />
       <div className="main-div">
-        <div className="info-div">
-          <span>Hello, my name is</span>
-          <h1>Jakub Chmielecki</h1>
-          <span>And I am </span>
-          <span
-            style={{ color: "#648Bea", fontWeight: "bold", fontSize: "25px" }}
-          >
-            IT Engineer
-          </span>
-          .
-          <CvSection />
-        </div>
-
-        <div className="bitmoji-container">
-          <Image
-            src="/assets/images/bitmoji.png"
-            alt="Bitmoji"
-            height={450}
-            width={450}
-          />
+        <div className="stuff-container">
+          <div className="info-div">
+            <span>Hello, my name is</span>
+            <h1>Jakub Chmielecki</h1>
+            <span>And I am </span>
+            <span
+              style={{ color: "#648Bea", fontWeight: "bold", fontSize: "25px" }}
+            >
+              IT Engineer
+            </span>
+            .
+            <CvSection />
+          </div>
+          <div className="bitmoji-container">
+            <Image
+              src="/assets/images/bitmoji.png"
+              alt="Bitmoji"
+              height={450}
+              width={450}
+            />
+          </div>
         </div>
       </div>
     </main>
