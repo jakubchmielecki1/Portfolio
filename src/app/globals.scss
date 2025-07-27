@@ -203,85 +203,86 @@ main {
 /* Media Queries dla responsywności - TYLKO TE BLOKI POPRAWIONE */
 
 @media (max-width: 1024px) {
-  main {
-    overflow-y: auto; /* Pozwól na przewijanie głównego kontenera na mobile */
-  }
-
   main .main-div {
-    display: flex; /* Zmień na flexbox dla układu kolumnowego na tabletach/mniejszych desktopach */
-    flex-direction: column; /* Ułóż elementy pionowo */
-    justify-content: flex-start; /* Zacznij od góry */
-    align-items: center; /* Wyśrodkuj elementy poziomo */
-    height: auto; /* Pozwól na dynamiczne dostosowanie wysokości */
-    min-height: calc(
-      100vh - 70px
-    ); /* Minimalna wysokość, aby pokryć pozostałą część ekranu (odjąć wysokość Navbara) */
-    padding: 20px 10px; /* Dodaj padding */
-    overflow-y: auto; /* Pozwól na przewijanie tylko main-div, jeśli zawartość jest za długa */
-    width: 100vw;
-    max-width: 100vw;
+    padding: 15px 5px;
+    padding-top: 70px;
   }
 
   main .main-div .stuff-container {
-    flex-direction: column; /* Ułóż elementy pionowo w stuff-container */
-    width: 95%;
-    max-width: 500px; /* Ogranicz szerokość, aby nie rozciągały się za bardzo */
-    gap: 30px; /* Zmniejsz odstęp między elementami */
-    padding-bottom: 0; /* Resetuj ewentualny padding */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 
-  main .main-div .info-div {
-    width: 100%;
-    max-width: 500px; /* Upewnij się, że nie jest za szeroki */
-    height: auto; /* Pozwól na dynamiczne dostosowanie wysokości */
-    text-align: center; /* Wyśrodkuj tekst */
-    margin: 0; /* Zresetuj marginesy */
-    transform: none !important; /* Usuń wszystkie transformacje z mobile */
-    order: 1; /* Upewnij się, że info-div jest pierwsze */
+  main .main-div .stuff-container .bitmoji-container {
+    transform: translateX(200px) translateY(100px);
   }
 
-  main .main-div .bitmoji-container {
-    width: 100%;
-    max-width: 300px; /* Mniejszy rozmiar Bitmoji na tabletach */
-    height: auto; /* Pozwól na dynamiczne dostosowanie wysokości */
-    transform: none !important; /* Usuń wszystkie transformacje z mobile */
-    margin-top: auto; /* KLUCZOWE: Wypycha Bitmoji na dół, jeśli jest miejsce */
-    margin-bottom: 0; /* Resetuj dolny margines */
-    order: 2; /* Upewnij się, że Bitmoji jest drugie */
+  main .main-div .stuff-container .info-div {
+    transform: translateY(175px) translateX(-200px) !important;
   }
 
-  main .main-div .bitmoji-container img {
-    width: 100%;
-    height: auto; /* Obraz dostosowuje się do szerokości kontenera */
+  main .main-dic .stuff-container .cv-wrapper {
+    transform: translateY(25px) translateX(-225px);
+    justify-content: center;
+  }
+}
+
+@media (max-width: 891px) {
+  main .main-div {
+    padding: 15px 5px;
+    padding-top: 70px;
   }
 
-  main .info-div h1 {
-    font-size: 2em;
+  main .main-div .stuff-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
   }
 
-  main .info-div span {
-    font-size: 1.1em;
+  main .main-div .stuff-container .bitmoji-container {
+    transform: translateX(10px) translateY(90px);
   }
 
-  main .info-div span[style] {
-    font-size: 1.2em !important;
+  main .main-div .stuff-container .info-div {
+    transform: translateY(0px) translateX(100px) !important;
+  }
+
+  main .main-div .stuff-container .cv-wrapper {
+    transform: translateY(50px) translateX(-75px);
+    justify-content: center;
   }
 }
 
 @media (max-width: 768px) {
-  /* Dodatkowe dostosowania dla jeszcze mniejszych ekranów, jeśli potrzebne */
   main .main-div {
-    padding: 15px 10px;
-    padding-top: 70px; /* Nadal potrzebny padding od Navbara */
+    padding: 15px 5px;
+    padding-top: 70px;
   }
 
-  main .main-div .bitmoji-container {
-    max-width: 220px; /* Jeszcze mniejsze Bitmoji na telefonach */
-    margin-top: auto; /* Zapewnia, że jest na dole */
+  main .main-div .stuff-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
   }
 
-  main .info-div {
-    margin-bottom: 20px; /* Trochę odstępu po tekście */
+  main .main-div .stuff-container .bitmoji-container {
+    transform: translateX(10px) translateY(90px);
+  }
+
+  main .main-div .stuff-container .info-div {
+    transform: translateY(0px) translateX(100px) !important;
+  }
+
+  main .main-div .stuff-container .cv-wrapper {
+    transform: translateY(50px) translateX(-75px);
+    justify-content: center;
   }
 }
 
@@ -291,12 +292,26 @@ main {
     padding-top: 70px;
   }
 
-  main .main-div .bitmoji-container {
-    max-width: 180px; /* Minimalny rozmiar Bitmoji */
-    margin-top: auto; /* Zapewnia, że jest na dole */
+  main .main-div .stuff-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 20px;
   }
 
-  main .main-div .info-div {
-    font-size: 0.9em; /* Mniejsza czcionka na najmniejszych ekranach */
+  main .main-div .stuff-container .bitmoji-container {
+    max-width: 180px; /* Minimalny rozmiar Bitmoji */
+  }
+
+  main .main-div .stuff-container .info-div {
+    transform: translateY(0px) translateX(150px) !important;
+  }
+
+  main .cv-wrapper {
+    transform: translateY(100px);
+    justify-content: center;
   }
 }

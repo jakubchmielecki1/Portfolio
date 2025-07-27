@@ -18,14 +18,16 @@ export default function Home() {
               IT Engineer
             </span>
             .
-            <CvSection />
+            <div className="cv-wrapper">
+              <CvSection />
+            </div>
           </div>
           <div className="bitmoji-container">
             <Image
               src="/assets/images/bitmoji.png"
               alt="Bitmoji"
-              height={450}
-              width={450}
+              fill
+              style={{ objectFit: "contain" }} // Zapewnia, że obraz będzie się skalował, zachowując proporcje
             />
           </div>
         </div>
