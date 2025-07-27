@@ -27,8 +27,8 @@ export default function Front() {
     <main>
       <Navbar />
       <div className="main-div f-end-main-div">
-        <div className="place-for-cyber-info">
-          <div className="f-end-info" style={{ marginTop: "5%" }}>
+        <div className="place-for-info">
+          <div className="f-end-info">
             <span className="description-text-f-end">
               <h1>💻 Front-end Development</h1>
               In my free time, I dedicate myself to my passion — Front-end
@@ -61,8 +61,8 @@ export default function Front() {
           <Image
             src="/assets/images/stock.jpg"
             alt="Startup Stock Photo"
-            width={500}
-            height={300}
+            fill // Używamy fill, aby obraz wypełnił kontener rodzica
+            style={{ objectFit: "cover", borderRadius: "8px" }}
           />
           <div className="click-indicator">
             <span className="arrow"></span>

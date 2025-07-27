@@ -179,6 +179,8 @@ main {
       cursor: pointer;
       transition: 0.3s all ease;
       position: relative;
+      width: 500px; /* Domyślna szerokość kontenera */
+      height: 300px; /* Domyślna wysokość kontenera */
       z-index: 1;
 
       &:hover {
@@ -201,11 +203,53 @@ main {
 }
 
 /* Media Queries dla responsywności - TYLKO TE BLOKI POPRAWIONE */
+@media (max-width: 1284px) {
+  main .main-div .f-end-info {
+    height: 250px;
+    width: 750px;
+    background-color: white;
+    margin-left: 25px;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    transform: translateY(-350px) translateX(200px);
+  }
+  main .main-div .f-end-screanshots {
+    transform: translateX(-400px) translateY(100px);
+  }
+}
 
 @media (max-width: 1024px) {
   main .main-div {
     padding: 15px 5px;
     padding-top: 70px;
+  }
+
+  main .main-div .f-end-info {
+    height: 250px;
+    width: 750px;
+    background-color: white;
+    margin-left: 25px;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    transform: translateY(-350px) translateX(200px);
+  }
+
+  main .main-div .f-end-screanshots {
+    transform: translateX(-400px) translateY(100px);
+  }
+
+  main .main-div .f-end-main-div .place-for-info {
+    height: 250px;
+    width: 750px;
+    background-color: white;
+    background-color: transparent;
+    color: white;
+  }
+
+  main .main-div .description-text-f-end {
+    font-size: 17.5px;
   }
 
   main .main-div .stuff-container {
@@ -225,6 +269,22 @@ main {
   main .main-dic .stuff-container .cv-wrapper {
     transform: translateY(25px) translateX(-225px);
     justify-content: center;
+  }
+}
+
+@media (max-width: 943px) {
+  main .main-div .f-end-info {
+    height: 250px;
+    width: 750px;
+    background-color: white;
+    margin-left: 25px;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    transform: translateY(-350px) translateX(300px);
+  }
+  main .main-div .f-end-screanshots {
+    transform: translateX(-400px) translateY(100px);
   }
 }
 
@@ -270,6 +330,24 @@ main {
     align-items: center;
     justify-content: center;
     gap: 20px;
+  }
+
+  main .main-div .f-end-info {
+    height: 350px;
+    width: 550px;
+    background-color: white;
+    margin-left: 25px;
+    background-color: transparent;
+    color: white;
+    font-size: 10px;
+    transform: translateY(-300px) translateX(300px);
+  }
+  main .main-div .f-end-screanshots {
+    transform: translateX(-350px) translateY(100px);
+  }
+
+  main .main-div .description-text-f-end {
+    font-size: 15px;
   }
 
   main .main-div .stuff-container .bitmoji-container {
