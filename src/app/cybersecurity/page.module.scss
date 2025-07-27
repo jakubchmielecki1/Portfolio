@@ -1,24 +1,23 @@
-.superior-cyber {
-  height: 100vh;
-  width: 100vw;
-}
-
 .cyber-main-div {
   height: calc(100vh - 50px);
   width: 100%;
-
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: grid;
-  grid-template-columns: auto auto;
+  /* Zmieniono z 'auto auto' na bardziej kontrolowane kolumny */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); /* Pozwala kolumnom się kurczyć */
   grid-template-rows: auto;
+  align-items: center; /* Wyśrodkowanie w pionie */
+  justify-content: center; /* Wyśrodkowanie w poziomie */
+  gap: 50px; /* Dodaj odstęp między kolumnami */
+  padding: 20px; /* Dodaj padding, aby zawartość nie przylegała do krawędzi */
 }
 
 .place-for-friendly-hacking {
   height: 200px;
   width: 600px;
-  margin-left: 550px;
+  transform: translateX(550px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,6 +40,14 @@
   transition: 0.5s;
 }
 
+.cyber-info {
+  height: 250px;
+  width: 250px;
+  color: white;
+  background-color: transparent;
+  font-size: 20px;
+}
+
 .post-button:hover {
   transform: scale(1.1);
   background-color: green;
@@ -49,4 +56,17 @@
 .new-element {
   height: auto;
   width: auto;
+}
+
+@media (max-width: 1250px) {
+  .place-for-friendly-hacking {
+    transform: translateX(150px) translateY(200px);
+  }
+}
+
+@media (max-width: 759px) {
+  .cyber-info {
+    height: 250px;
+    width: 750px;
+  }
 }

@@ -217,6 +217,16 @@ main {
   main .main-div .f-end-screanshots {
     transform: translateX(-400px) translateY(100px);
   }
+
+  .place-for-info {
+    height: 250px;
+    width: 750px;
+    background-color: white;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    transform: translateY(-255px);
+  }
 }
 
 @media (max-width: 1024px) {
@@ -364,6 +374,25 @@ main {
   }
 }
 
+@media (max-width: 560px) {
+  main .main-div .f-end-info {
+    height: 250px;
+    width: 450px;
+    background-color: white;
+    margin-left: 25px;
+    background-color: transparent;
+    color: white;
+    font-size: 10px;
+    transform: translateY(-325px) translateX(215px);
+  }
+
+  main .main-div .f-end-screanshots {
+    height: 215px;
+    width: 315px;
+    transform: translateX(-300px) translateY(100px);
+  }
+}
+
 @media (max-width: 480px) {
   main .main-div {
     padding: 15px 5px;
@@ -378,6 +407,23 @@ main {
     justify-content: center;
     justify-items: center;
     gap: 20px;
+  }
+
+  main .main-div .f-end-info {
+    height: 250px;
+    width: 350px;
+    background-color: white;
+    margin-left: 25px;
+    background-color: transparent;
+    color: white;
+    font-size: 10px;
+    transform: translateY(-325px) translateX(175px);
+  }
+
+  main .main-div .f-end-screanshots {
+    height: 150px;
+    width: 250px;
+    transform: translateX(-250px) translateY(100px);
   }
 
   main .main-div .stuff-container .bitmoji-container {

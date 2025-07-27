@@ -19,19 +19,13 @@ export default function Cyber() {
   return (
     <main>
       <Navbar />
-      <div className="main-div f-end-main-div">
+      <div className="main-div cyber-main-div">
         <div className="place-for-info">
-          <div
-            className="f-end-info"
-            style={{ marginTop: "5%", transform: "translateY(5px)" }}
-          >
+          <div className="cyber-info">
             <span
               className="description-text-cyber"
               style={{
-                maxWidth: "700px",
-                lineHeight: "1.6",
-                padding: "0 20px",
-                transform: "translateY(-50px)",
+                color: "white",
               }}
             >
               <h1>🔐 Cybersecurity</h1>
