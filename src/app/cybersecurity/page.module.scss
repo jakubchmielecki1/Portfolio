@@ -2,7 +2,6 @@
   height: calc(100vh - 50px);
   width: 100%;
   background-image: url("/assets/images/background-image.png");
-
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -43,11 +42,15 @@
 }
 
 .cyber-info {
-  height: 250px;
-  width: 250px;
+  height: 150px;
+  width: 750px;
   color: white;
   background-color: transparent;
-  font-size: 20px;
+  font-size: 15px;
+  transform: translateY(-50px) translateX(100px);
+}
+
+.place-for-cyber-content {
 }
 
 .post-button:hover {
@@ -62,13 +65,47 @@
 
 @media (max-width: 1250px) {
   .place-for-friendly-hacking {
-    transform: translateX(150px) translateY(200px);
+    transform: translateX(150px) translateY(10px);
   }
 }
 
-@media (max-width: 759px) {
+@media (max-width: 880px) {
   .cyber-info {
+    transform: translateY(-50px) translateX(25px);
+  }
+}
+
+@media (max-width: 796px) {
+  .cyber-info {
+    transform: translateX(50px);
     height: 250px;
-    width: 750px;
+    width: 550px;
+  }
+
+  .place-for-friendly-hacking {
+    transform: translateY(10px);
+  }
+}
+
+@media (max-width: 610px) {
+  .cyber-info {
+    transform: translateX(10px) translateY(-200px);
+    height: 350px;
+    width: 400px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .place-for-friendly-hacking {
+    transform: translateX(-90px) translateY(0px);
+  }
+
+  .user-input {
+    height: 50px;
+    width: 350px;
+    padding-left: 5px;
   }
 }

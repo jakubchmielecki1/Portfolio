@@ -19,9 +19,10 @@ export default function Cyber() {
   return (
     <main>
       <Navbar />
+
       <div className={styles["cyber-main-div"]}>
-        <div className="place-for-info">
-          <div className="cyber-info">
+        <div className={styles["place-for-cyber-content"]}>
+          <div className={styles["cyber-info"]}>
             <span
               className="description-text-cyber"
               style={{
