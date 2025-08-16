@@ -19,6 +19,10 @@ const CvSection = () => {
     }, 100);
   };
 
+  const toggleCvContainer = () => {
+    setIsOpen((prev) => !prev);
+  };
+
   const CvIconSvg = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -37,6 +41,7 @@ const CvSection = () => {
         className="cv-highlight"
         onMouseEnter={showCvContainer}
         onMouseLeave={hideCvContainer}
+        onClick={toggleCvContainer}
       >
         {CvIconSvg}
       </div>
